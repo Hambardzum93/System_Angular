@@ -16,7 +16,8 @@ export class RegisterPageComponent implements OnInit, OnDestroy {
   aSub$: Subscription
 
   constructor(private auth: AuthService,
-              private router: Router) { }
+              private router: Router) {
+  }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -24,7 +25,8 @@ export class RegisterPageComponent implements OnInit, OnDestroy {
       password: new FormControl(null, [Validators.required, Validators.minLength(6)])
     })
   }
-  onSubmit(){
+
+  onSubmit() {
     this.form.disable()
     this.aSub$ = this.auth.register(this.form.value).subscribe(
       () => {
@@ -43,7 +45,7 @@ export class RegisterPageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.aSub$){
+    if (this.aSub$) {
       this.aSub$.unsubscribe()
     }
   }
