@@ -5,13 +5,13 @@ import {AuthService} from "./shared/services/auth.service";
   selector: 'app-root',
   template: '<router-outlet></router-outlet>',
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   constructor(private auth: AuthService) {
   }
 
   ngOnInit(): void {
     const potentialToken = localStorage.getItem('auth-token')
-    if (potentialToken !== null){
+    if (potentialToken !== null) {
       this.auth.setToken(potentialToken)
     }
   }
