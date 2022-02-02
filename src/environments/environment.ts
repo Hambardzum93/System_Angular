@@ -14,3 +14,17 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+//mongo
+// email
+// mkrtchyanartush3@gmail.com
+// pass
+// duts356duts746
+
+//basa admin user
+// ham
+// 1q2w3e4r5t
+
+//dbKay
+// mongodb+srv://ham:<password>@cluster0.ng6mz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
