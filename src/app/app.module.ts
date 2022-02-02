@@ -10,6 +10,7 @@ import {AuthLayoutComponent} from './shared/layouts/auth-layout/auth-layout.comp
 import {SiteLayoutComponent} from './shared/layouts/site-layout/site-layout.component';
 import {RegisterPageComponent} from './register-page/register-page.component';
 import {TokenInterceptor} from "./shared/classes/token.interceptor";
+import {OverviewPageComponent} from './overview-page/overview-page.component';
 
 const HTTP_INTERCEPTOR = {
   provide: HTTP_INTERCEPTORS,
@@ -23,7 +24,8 @@ const HTTP_INTERCEPTOR = {
     LoginPageComponent,
     AuthLayoutComponent,
     SiteLayoutComponent,
-    RegisterPageComponent
+    RegisterPageComponent,
+    OverviewPageComponent
   ],
   imports: [
     BrowserModule,
@@ -37,4 +39,5 @@ const HTTP_INTERCEPTOR = {
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
