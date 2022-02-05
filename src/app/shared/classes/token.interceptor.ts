@@ -7,7 +7,7 @@ import {Router} from "@angular/router";
 
 @Injectable()
 
-export class TokenInterceptor implements HttpInterceptor{
+export class TokenInterceptor implements HttpInterceptor {
 
   constructor(private auth: AuthService,
               private router: Router) {
@@ -15,7 +15,7 @@ export class TokenInterceptor implements HttpInterceptor{
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-    if (this.auth.isAuthenticated()){
+    if (this.auth.isAuthenticated()) {
       req = req.clone({
         setHeaders: {
           Authorization: this.auth.getToken()
@@ -37,6 +37,8 @@ export class TokenInterceptor implements HttpInterceptor{
           sessionFailed: true
         }
       })
+
+      console.log('401 intercept', error)
     }
 
     return throwError(error)
